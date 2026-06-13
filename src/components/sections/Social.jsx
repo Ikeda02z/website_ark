@@ -10,7 +10,7 @@ export default function Social() {
         <SectionTitle
           tag="// Conexión"
           title="Redes sociales"
-          subtitle="Encuéntrame en estas plataformas"
+          subtitle="Síguenos en nuestras plataformas oficiales"
         />
 
         <ScrollReveal>

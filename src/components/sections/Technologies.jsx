@@ -43,7 +43,7 @@ export default function Technologies() {
         <SectionTitle
           tag="// Habilidades"
           title="Tecnologías"
-          subtitle="Herramientas que domino y sigo perfeccionando"
+          subtitle="Stack tecnológico que impulsa nuestros proyectos"
         />
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">

@@ -5,7 +5,7 @@ import { siteConfig } from '../../data/config'
 
 const navLinks = [
   { label: 'Inicio', href: '#hero' },
-  { label: 'Sobre mí', href: '#about' },
+  { label: 'Sobre nosotros', href: '#about' },
   { label: 'Proyectos', href: '#projects' },
   { label: 'Tecnologías', href: '#tech' },
   { label: 'Servicios', href: '#services' },
@@ -41,7 +41,7 @@ export default function Navbar() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 md:h-20 flex items-center justify-between">
         <a href="#hero" className="flex items-center gap-3 group">
           <div className="w-8 h-8 rounded border border-neon-cyan/40 flex items-center justify-center group-hover:border-neon-cyan/70 transition-colors">
-            <span className="font-display text-neon-cyan text-xs font-bold">GV</span>
+            <span className="font-display text-neon-cyan text-xs font-bold">{siteConfig.initials}</span>
           </div>
           <span className="font-display text-sm md:text-base font-semibold tracking-wider hidden sm:block">
             {siteConfig.name}

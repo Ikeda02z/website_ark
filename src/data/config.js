@@ -1,12 +1,14 @@
 export const siteConfig = {
-  name: 'Gabriel Vega',
-  title: 'Amateur Developer',
-  slogan: 'Transformo ideas en código. Construyo el futuro digital, un proyecto a la vez.',
-  email: 'contacto@gabrielvega.dev',
+  name: 'Darkcorp',
+  title: 'Independent Software Industry',
+  initials: 'DC',
+  slogan:
+    'Desarrollamos software a medida. Innovación, precisión y tecnología al servicio de tu negocio.',
+  email: 'contacto@darkcor.com',
   about: {
     specialties: ['Frontend', 'Backend', 'Automatización', 'UI/UX'],
     technologies: ['React', 'Node.js', 'Python', 'Tailwind CSS', 'MongoDB'],
     description:
-      'Desarrollador apasionado por crear experiencias digitales únicas. Combino diseño futurista con código limpio para entregar soluciones que destacan. Cada proyecto es una oportunidad de aprender, innovar y superar límites.',
+      'Darkcorp es una empresa independiente de desarrollo de software formada por dos socios apasionados por la tecnología. Creamos soluciones digitales a medida, combinando diseño futurista con ingeniería sólida para impulsar el crecimiento de nuestros clientes.',
   },
 }

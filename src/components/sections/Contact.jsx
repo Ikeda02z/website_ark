@@ -38,7 +38,7 @@ export default function Contact() {
         <SectionTitle
           tag="// Comunicación"
           title="Contacto"
-          subtitle="¿Tienes un proyecto en mente? Hablemos"
+          subtitle="¿Tienes un proyecto en mente? Contáctanos"
         />
 
         <ScrollReveal>
@@ -98,7 +98,7 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   rows={5}
-                  placeholder="Cuéntame sobre tu proyecto..."
+                  placeholder="Cuéntanos sobre tu proyecto..."
                   className={`${inputClass} resize-none`}
                 />
               </div>
@@ -123,7 +123,7 @@ export default function Contact() {
                     exit={{ opacity: 0 }}
                   >
                     <span className="w-2 h-2 rounded-full bg-neon-teal" />
-                    Mensaje enviado correctamente. Te responderé pronto.
+                    Mensaje enviado correctamente. Te responderemos pronto.
                   </motion.p>
                 )}
               </AnimatePresence>

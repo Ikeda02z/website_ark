@@ -90,7 +90,7 @@ export default function Hero() {
           {[
             { label: 'Proyectos', value: '10+' },
             { label: 'Tecnologías', value: '8+' },
-            { label: 'Experiencia', value: '2yr' },
+            { label: 'Socios', value: '2' },
           ].map((stat) => (
             <div key={stat.label} className="glass-panel p-3 rounded-lg">
               <p className="font-display text-xl md:text-2xl font-bold text-neon-cyan">

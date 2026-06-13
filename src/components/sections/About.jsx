@@ -11,9 +11,9 @@ export default function About() {
     <section id="about" className="section-padding relative">
       <div className="max-w-7xl mx-auto">
         <SectionTitle
-          tag="// Perfil"
-          title="Sobre mí"
-          subtitle="Conoce al operador detrás del código"
+          tag="// Empresa"
+          title="Sobre nosotros"
+          subtitle="Conoce la industria de software detrás de cada proyecto"
         />
 
         <ScrollReveal>
@@ -25,7 +25,7 @@ export default function About() {
                 <span className="w-3 h-3 rounded-full bg-neon-cyan/60" />
               </div>
               <span className="font-mono text-xs text-gray-500 ml-2 tracking-widest">
-                PROFILE.SYS
+                COMPANY.SYS
               </span>
             </div>
 
@@ -37,7 +37,7 @@ export default function About() {
                 >
                   <div className="absolute inset-0 bg-gradient-to-br from-neon-cyan/10 to-neon-purple/10" />
                   <span className="font-display text-4xl md:text-5xl font-black neon-text relative z-10">
-                    GV
+                    {siteConfig.initials}
                   </span>
                   <motion.div
                     className="absolute inset-0 border border-neon-cyan/30 rounded-xl"

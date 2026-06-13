@@ -12,8 +12,8 @@ export default function Projects() {
       <div className="max-w-7xl mx-auto">
         <SectionTitle
           tag="// Portafolio"
-          title="Proyectos"
-          subtitle="Explora mis creaciones digitales"
+          title="Nuestros proyectos"
+          subtitle="Explora las soluciones que hemos desarrollado"
         />
 
         <div className="grid sm:grid-cols-2 gap-6 lg:gap-8">
