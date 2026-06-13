@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply box-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 229, 255, 0.3) transparent;
+  }
+
+  body {
+    @apply bg-void-950 text-white font-body antialiased overflow-x-hidden;
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% -20%, rgba(0, 229, 255, 0.08), transparent),
+      radial-gradient(ellipse 60% 40% at 100% 50%, rgba(139, 92, 246, 0.06), transparent),
+      radial-gradient(ellipse 50% 30% at 0% 80%, rgba(20, 184, 166, 0.05), transparent);
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0, 229, 255, 0.25);
+    border-radius: 3px;
+  }
+
+  ::selection {
+    background: rgba(0, 229, 255, 0.3);
+    color: white;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-glass-light backdrop-blur-xl border border-glass-border rounded-xl;
+    box-shadow:
+      0 8px 32px rgba(0, 0, 0, 0.4),
+      inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  }
+
+  .glass-panel-hover {
+    @apply glass-panel transition-all duration-300;
+  }
+
+  .glass-panel-hover:hover {
+    @apply border-neon-cyan/30;
+    box-shadow:
+      0 8px 32px rgba(0, 0, 0, 0.4),
+      0 0 20px rgba(0, 229, 255, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  }
+
+  .neon-text {
+    @apply text-transparent bg-clip-text;
+    background-image: linear-gradient(135deg, #00e5ff 0%, #8b5cf6 50%, #ec4899 100%);
+  }
+
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8 py-20 md:py-28;
+  }
+
+  .corner-accent::before,
+  .corner-accent::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-color: rgba(0, 229, 255, 0.5);
+    border-style: solid;
+    pointer-events: none;
+  }
+
+  .corner-accent::before {
+    top: -1px;
+    left: -1px;
+    border-width: 2px 0 0 2px;
+  }
+
+  .corner-accent::after {
+    bottom: -1px;
+    right: -1px;
+    border-width: 0 2px 2px 0;
+  }
+
+  .scanline {
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 229, 255, 0.015) 2px,
+      rgba(0, 229, 255, 0.015) 4px
+    );
+    pointer-events: none;
+  }
+
+  .hud-line {
+    @apply h-px w-full;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(0, 229, 255, 0.4) 20%,
+      rgba(0, 229, 255, 0.4) 80%,
+      transparent
+    );
+  }
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 20px rgba(0, 229, 255, 0.5);
+  }
+
+  .will-change-transform {
+    will-change: transform;
+  }
+}
