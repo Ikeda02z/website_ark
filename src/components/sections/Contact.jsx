@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import emailjs from '@emailjs/browser'
 import { HiOutlineMail, HiOutlineUser, HiOutlineChat } from 'react-icons/hi'
 import SectionTitle from '../ui/SectionTitle'
 import ScrollReveal from '../ui/ScrollReveal'
@@ -13,20 +14,47 @@ export default function Contact() {
     message: '',
   })
   const [status, setStatus] = useState(null)
+  const [statusMessage, setStatusMessage] = useState('')
 
   const handleChange = (e) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }))
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
+
+    const { VITE_EMAILJS_SERVICE_ID, VITE_EMAILJS_TEMPLATE_ID, VITE_EMAILJS_PUBLIC_KEY } =
+      import.meta.env
+
+    if (!VITE_EMAILJS_SERVICE_ID || !VITE_EMAILJS_TEMPLATE_ID || !VITE_EMAILJS_PUBLIC_KEY) {
+      setStatus('error')
+      setStatusMessage(
+        'El formulario aún no está configurado. Añade las credenciales de EmailJS y reinicia el servidor.'
+      )
+      return
+    }
+
     setStatus('sending')
 
-    setTimeout(() => {
+    try {
+      await emailjs.send(
+        VITE_EMAILJS_SERVICE_ID,
+        VITE_EMAILJS_TEMPLATE_ID,
+        {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        },
+        VITE_EMAILJS_PUBLIC_KEY
+      )
       setStatus('success')
+      setStatusMessage('Mensaje enviado correctamente. Te responderemos pronto.')
       setFormData({ name: '', email: '', message: '' })
-      setTimeout(() => setStatus(null), 4000)
-    }, 1500)
+    } catch (error) {
+      console.error('Error al enviar el formulario de contacto:', error)
+      setStatus('error')
+      setStatusMessage('No se pudo enviar el mensaje. Inténtalo de nuevo más tarde.')
+    }
   }
 
   const inputClass =
@@ -115,15 +143,22 @@ export default function Contact() {
               </div>
 
               <AnimatePresence>
-                {status === 'success' && (
+                {(status === 'success' || status === 'error') && (
                   <motion.p
-                    className="text-neon-teal text-sm font-mono flex items-center gap-2"
+                    role={status === 'error' ? 'alert' : 'status'}
+                    className={`text-sm font-mono flex items-center gap-2 ${
+                      status === 'error' ? 'text-red-400' : 'text-neon-teal'
+                    }`}
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0 }}
                   >
-                    <span className="w-2 h-2 rounded-full bg-neon-teal" />
-                    Mensaje enviado correctamente. Te responderemos pronto.
+                    <span
+                      className={`w-2 h-2 rounded-full ${
+                        status === 'error' ? 'bg-red-400' : 'bg-neon-teal'
+                      }`}
+                    />
+                    {statusMessage}
                   </motion.p>
                 )}
               </AnimatePresence>
