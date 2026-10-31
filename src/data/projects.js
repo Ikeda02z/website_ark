@@ -4,7 +4,7 @@ export const projects = [
     name: 'Dashboard Persolizadas',
     description:
       'Panel de control empresarial con visualización de datos en tiempo real, desarrollado por Darkcorp para gestión operativa.',
-    image: '/img/dasboard.jpeg',
+    image: `${import.meta.env.BASE_URL}img/dasboard.jpeg`,
     demoUrl: '',
     githubUrl: 'https://github.com/darkcorp',
     tags: ['React', 'D3.js', 'Tailwind'],
@@ -14,7 +14,7 @@ export const projects = [
     name: 'Inventarios para tu negocio',
     description:
       'si piensas en abrir un emprendimiento, una sistema de inventario es una opcion muy impresidible para mantener todo en orden.',
-    image: '/img/bases.jpeg',
+    image: `${import.meta.env.BASE_URL}img/bases.jpeg`,
     demoUrl: '#',
     githubUrl: 'https://github.com/darkcorp',
     tags: ['Node.js', 'Discord.js'],
