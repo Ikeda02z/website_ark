@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion'
-import { FiExternalLink, FiGithub } from 'react-icons/fi'
 import { projects } from '../../data/projects'
 import SectionTitle from '../ui/SectionTitle'
 import ScrollReveal from '../ui/ScrollReveal'
@@ -49,24 +48,7 @@ export default function Projects() {
                     {project.description}
                   </p>
 
-                  <div className="flex gap-3">
-                    <GlowButton
-                      href={project.demoUrl}
-                      variant="ghost"
-                      className="flex-1 !px-4 !py-2 !text-xs"
-                    >
-                      <FiExternalLink />
-                      Demo
-                    </GlowButton>
-                    <GlowButton
-                      href={project.githubUrl}
-                      variant="secondary"
-                      className="flex-1 !px-4 !py-2 !text-xs"
-                    >
-                      <FiGithub />
-                      GitHub
-                    </GlowButton>
-                  </div>
+
                 </div>
               </GlassCard>
             </ScrollReveal>

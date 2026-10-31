@@ -4,7 +4,7 @@ export const siteConfig = {
   initials: 'DC',
   slogan:
     'Desarrollamos software a medida. Innovación, precisión y tecnología al servicio de tu negocio.',
-  email: 'contacto@darkcor.com',
+  email: 'yohanluck177@gmail.com',
   about: {
     specialties: ['Frontend', 'Backend', 'Automatización', 'UI/UX'],
     technologies: ['React', 'Node.js', 'Python', 'Tailwind CSS', 'MongoDB'],

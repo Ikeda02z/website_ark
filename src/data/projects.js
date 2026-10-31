@@ -1,20 +1,20 @@
 export const projects = [
   {
     id: 1,
-    name: 'Nexus Dashboard',
+    name: 'Dashboard Persolizadas',
     description:
       'Panel de control empresarial con visualización de datos en tiempo real, desarrollado por Darkcorp para gestión operativa.',
-    image: 'https://picsum.photos/seed/nexus/600/400',
-    demoUrl: '#',
+    image: '/img/dasboard.jpeg',
+    demoUrl: '',
     githubUrl: 'https://github.com/darkcorp',
     tags: ['React', 'D3.js', 'Tailwind'],
   },
   {
     id: 2,
-    name: 'Aether Bot',
+    name: 'Inventarios para tu negocio',
     description:
-      'Solución de bot para Discord con comandos personalizados, moderación automática y sistema de niveles para comunidades.',
-    image: 'https://picsum.photos/seed/aether/600/400',
+      'si piensas en abrir un emprendimiento, una sistema de inventario es una opcion muy impresidible para mantener todo en orden.',
+    image: '/img/bases.jpeg',
     demoUrl: '#',
     githubUrl: 'https://github.com/darkcorp',
     tags: ['Node.js', 'Discord.js'],

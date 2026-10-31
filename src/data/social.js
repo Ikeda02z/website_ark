@@ -5,36 +5,30 @@ export const socialLinks = [
   {
     id: 'github',
     label: 'GitHub',
-    url: 'https://github.com/darkcorp-industries',
+    url: 'https://github.com/Ikeda02z',
     icon: FaGithub,
     color: '#ffffff',
   },
   {
     id: 'linkedin',
     label: 'LinkedIn',
-    url: 'https://linkedin.com/company/darkcorp-industries',
+    url: 'https://www.linkedin.com/in/gabriel-vega-533646447/',
     icon: FaLinkedin,
     color: '#0A66C2',
   },
   {
     id: 'tiktok',
     label: 'TikTok',
-    url: 'https://tiktok.com/@darkcorpindustries',
+    url: 'https://www.tiktok.com/@darkcorp.inc?is_from_webapp=1&sender_device=pc',
     icon: FaTiktok,
     color: '#ff0050',
   },
   {
     id: 'instagram',
     label: 'Instagram',
-    url: 'https://instagram.com/darkcorpindustries',
+    url: 'https://www.instagram.com/darkcorp2026/',
     icon: FaInstagram,
     color: '#E4405F',
   },
-  {
-    id: 'email',
-    label: 'Correo',
-    url: 'mailto:contacto@darkcorp.com',
-    icon: HiOutlineMail,
-    color: '#00e5ff',
-  },
+
 ]
